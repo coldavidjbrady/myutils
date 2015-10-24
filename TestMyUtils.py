@@ -1,8 +1,8 @@
-from MyUtils import OrderDict
+from MyUtils import *
 
 def main():
     # Some test code  
-    od = OrderDict()
+    od = OrderDict.OrderDict()
     # Don't need to refer to od.data as the dictionary because the "data" attribute is automatically
     # made available by Python as a List or Dictionary as defined within the __init__ function.
     # At least I think that’s the case…it works anyway.

@@ -1,5 +1,3 @@
-# Added to Dave's MacBook Pro
-
 from MyUtils import *
 
 def main():

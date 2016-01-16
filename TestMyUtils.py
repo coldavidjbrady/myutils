@@ -1,4 +1,4 @@
-from MyUtils import *
+from MyUtils import OrderDict
 
 def main():
     # Some test code  
@@ -13,6 +13,7 @@ def main():
     od[1] = "One"
     od["mon"] = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
     od["ten"] = 10
+    
        
     od.flag = True # Flag which is used by __str__ to print a more detailed version of Odict
     print(od)  # Print command will invoke the Odict.__str__ function because it was over-ridden in the class.
@@ -22,7 +23,14 @@ def main():
         el = next(od)
         # Using genObj as the variable because a generator object is returned due to use of the yield keyword in next() (22 Oct 15)
         for genObj in el:
-            print(genObj)     
+            print(genObj)  
+            
+            
+    print("\n***\n")
+    ordItems = od.getItems()
+    for i in ordItems:
+        print(od[i[1]])
+      
      
 if __name__ == "__main__":
     main()

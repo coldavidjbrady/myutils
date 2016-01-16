@@ -1,6 +1,8 @@
 '''
 Created on Oct 24, 2015
 
+Updated on 16 January 2016
+
 @author: dbrady
 '''
 from collections import UserDict
@@ -19,7 +21,7 @@ class OrderDict(UserDict):
         self.iterFlag = True
         
     def __setitem__(self, key, value):
-        # A dicitionary is an iterable so we can check to see if the key is already in the data dictionary
+        # A dictionary is an iterable so we can check to see if the key is already in the data dictionary
         if key not in self:
             # Increment count every time a new value that does not already exist is added
             self.order[self.count] = key
@@ -47,6 +49,11 @@ class OrderDict(UserDict):
             pairs in the dictionary. The k[0] refers to the key (i.e. count) stored in the order dictionary
             to sort the dictionary.'''
         return sorted(self.order.items(), key = lambda k: k[0])
+    
+    def getItems(self):
+        # Public method to retrieve items in order...does the exact same thing as __orderItems()
+        return sorted(self.order.items(), key = lambda k: k[0])
+    
  
     def __str__(self):
         ''' Override the print function by defining the __str__ method. This __str__ method returns the

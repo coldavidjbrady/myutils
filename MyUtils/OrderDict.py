@@ -27,8 +27,8 @@ class OrderDict(UserDict):
             self.order[self.count] = key
             self.count += 1
         # Either one of the following two lines will work to add the dictionary entry to the data attribute.
-        #super(Odict, self).__setitem__(key, value)
-        super().__setitem__(key, value)
+        super(OrderDict, self).__setitem__(key, value)
+        #super().__setitem__(key, value)
        
     def __iter__(self):
         return iter(self.data)

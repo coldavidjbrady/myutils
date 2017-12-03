@@ -1,7 +1,6 @@
 from MyUtils import OrderDict
 
 def main():
-    # Some test code  
     od = OrderDict.OrderDict("Merry", "Christmas")
     # Don't need to refer to od.data as the dictionary because the "data" attribute is automatically
     # made available by Python as a List or Dictionary as defined within the __init__ function.
